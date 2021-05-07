@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';  
 
-const HeaderBarBrand = () => (
+const HeaderBarBrand = () => (  
   <div className="navbar-brand">
     <a
       className="navbar-item"

@@ -3,6 +3,14 @@ import { withRouter } from 'react-router';
 
 import { CardContent } from '../components';
 
+const mydata = async (e) => {
+  console.log(e.target);
+  //alert('whaaat')
+  let res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+  let data = await res.json();
+  console.log(data);
+}
+
 function ProductList({products}) {
   return (
     <div>
@@ -15,6 +23,7 @@ function ProductList({products}) {
                 name={product.name}
                 description={product.description}
               />
+              <button type='button' onClick={mydata}>Data</button>
             </div>
           </li>
         ))}
