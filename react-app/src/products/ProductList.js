@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { withRouter } from 'react-router';
 
 import { CardContent } from '../components';
 
+const [title, setTitle] = useState('Data');
+
 const mydata = async (e) => {
-  console.log(e.target);
+  
   //alert('whaaat')
   let res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
   let data = await res.json();
-  console.log(data);
+  setTitle(data.title);
 }
 
 function ProductList({products}) {
@@ -23,7 +25,7 @@ function ProductList({products}) {
                 name={product.name}
                 description={product.description}
               />
-              <button type='button' onClick={mydata}>Data</button>
+              <button type='button' onClick={mydata}>{title}</button>
             </div>
           </li>
         ))}
