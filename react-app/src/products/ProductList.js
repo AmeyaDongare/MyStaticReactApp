@@ -14,7 +14,8 @@ function ProductList({products}) {
               <CardContent
                 name={product.name}
                 description={product.description}
-              />            
+              />
+              <button>Click Me</button>            
             </div>
           </li>
         ))}
