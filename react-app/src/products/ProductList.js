@@ -18,7 +18,7 @@ function ProductList({products}) {
               <button onClick={() => {alert('Hi');
                               fetch('https://jsonplaceholder.typicode.com/todos/1')
                               .then(response => response.json())
-                              .then(json => console.log(json));}}>Click Me</button>            
+                              .then(json => alert(json));}}>Click Me</button>            
             </div>
           </li>
         ))}
